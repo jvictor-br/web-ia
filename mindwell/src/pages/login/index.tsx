@@ -1,18 +1,44 @@
 import styles from "./styles.module.css";
 import Button from "../../assets/components/button/Button";
-function Login() {
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-    return (
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const onSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    if (email === "larissa@gmail.com" && password === "12345678") {
+      navigate("/chat");
+    }
+  };
+
+  return (
     <div className={styles.container}>
-    <h1>Login</h1>
-    <form>
-        <input type="email" placeholder="Endereço de email"></input>
-        <input type="password" placeholder="Senha"></input>
-        <Button title="Entrar"/>
-    </form>
-    <a href="#">Esqueci a senha</a>
+      <h1>Login</h1>
+      <form onSubmit={onSubmit}>
+        <input
+          type="email"
+          placeholder="Endereço de email"
+          name="email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+        <input
+          type="password"
+          placeholder="Senha"
+          name="password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+        />
+        <Button title="Entrar" type="submit" />
+      </form>
+     
     </div>
-    )
+  );
 }
 
-export default Login
+export default Login;

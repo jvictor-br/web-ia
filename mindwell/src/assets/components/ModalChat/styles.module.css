@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Open+Sans&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.72);
+  width: 100vw;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container .wrapper {
+  display: flex;
+  background-color: #5442b6;
+  border-radius: 20px;
+  max-width: 740px;
+}
+
+.container .wrapper {
+  display: flex;
+  background-color: #5442b6;
+  border-radius: 20px;
+  max-width: 740px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 38px 1rem 0;
+  padding-right: 38px;
+}
+
+.container .wrapper img {
+  width: 50%;
+}
+
+.container .wrapper > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .wrapper > div img {
+  display: none;
+}
+
+.container .wrapper h3 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.container .wrapper p {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.container .wrapper .tip {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.container .wrapper .tips {
+  margin-top: 2rem;
+}
+
+.container .wrapper .tips p {
+  margin: 0;
+  margin-bottom: 8px;
+  line-height: 8px;
+}
+
+.container .wrapper .containerButton {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+@media screen and (max-width: 400px) {
+  .container .wrapper > img {
+    display: none;
+  }
+
+  .container .wrapper > div {
+    width: 100%;
+  }
+
+  .container .wrapper > div img {
+    display: block;
+    align-self: center;
+    width: 80%;
+  }
+
+  .container .wrapper {
+    padding: 2rem 38px 2rem 38px;
+  }
+
+  .container .wrapper .containerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
