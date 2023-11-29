@@ -17,8 +17,8 @@ function Initial() {
           <br /> preliminar da sua saúde mental
         </h3>
         <div className={styles.buttons}>
-          <Link to="/sign-in">
-            <Button title="Login" />
+          <Link to="/chat">
+            <Button title="Começar" />
           </Link>
         </div>
 
